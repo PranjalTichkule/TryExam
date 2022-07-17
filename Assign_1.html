@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function () {
+                var data1 = $("#box1").val();
+                var data2 = $("#box2").val();
+                var data3 = $("#box3").val();
+                var data4 = $("#box4").val();
+
+                var str = "<table border=1><th>Degree</th> <th>School/College</th> <th>University</th> <th>Marks</th>";
+                str += "<tr>";
+                str += "<td>" + data1 + "</td>";
+                str += "<td>" + data2 + "</td>";
+                str += "<td>" + data3 + "</td>";
+                str += "<td>" + data4 + "</td>";
+                str += "</tr>";
+                str += "</table>";
+                document.getElementById("res").innerHTML = str;
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+
+                <td>Select Occupation:</td>
+                <td>
+                    <select name="occupation">
+                        <option>(Select One)</option>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="Graduation">Graduation</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    School/College
+                </td>
+                <td>
+                    <input type="text" id="box2" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Board/University
+                </td>
+                <td>
+                    <input type="text" id="box3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Marks
+                </td>
+                <td>
+                    <input type="number" id="box4" />%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="submit" type="button" value="Update">
+                </td>
+            </tr>
+
+        </table>
+        <div id="res"></div>
+    </form>
+    
+</body>
+</html>
